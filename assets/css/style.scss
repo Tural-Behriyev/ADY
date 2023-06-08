@@ -1,0 +1,246 @@
+$bcg_p: center;
+$bcg_s: cover;
+$bcg_r: no-repeat;
+
+
+// header {
+//   min-height: 100vh;
+// }
+
+// .full__screen {
+//   display: flex;
+// }
+
+*{
+  border: none;
+}
+
+
+.ful_screen-bg{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.5s;
+
+  &:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+
+    .full_screen_item {
+      visibility: hidden;
+      transition: all 0.5s;
+    }
+    video {
+      visibility: visible;
+    }
+  }
+
+  .full_screen_item {
+    background-position: $bcg_p;
+    background-size: $bcg_s;
+    background-repeat: $bcg_r;
+    height: 100vh;
+  }
+
+  video {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+  }
+
+  .logo svg {
+    width: 91px;
+    height: 76px;
+  }
+  
+  .line{
+    height: 20px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left: 130%;
+  }
+
+  .eare_phoen {
+    font-size: 25px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -20%;
+    left: 200%;
+  }
+
+  .eare_phoen_number{
+    font-size: 25px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -20%;
+    left: 310%;
+  }
+  
+  .card{
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .card-body{
+    color: #fff;
+    min-height: 18rem;
+  }
+
+  .card-footer{
+    border: none !important;
+    background-color: transparent;
+  }
+
+  .card-body h3{
+    font-size: clamp(2rem, 2.1vw, 4.6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .card-body p{
+    color: rgba(255,255,255,.8);
+    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 1.3vw, 4.6rem);
+    height: 165px;
+    overflow: hidden;
+  }
+}
+
+
+   .footer__bottom_text{
+    position: absolute;
+    bottom: 5%;
+    color: white;
+    left: 3%;
+    z-index: 1;
+   }
+
+   .footer__bottom_social{
+    position: absolute;
+    display: flex;
+    bottom: 5%;
+    color: white;
+    left: 80%;
+    z-index: 1;
+   }
+
+   .footer__bottom_social div{
+    margin-right: 15px;
+   }
+
+   .footer__bottom_social i{
+    display: flex;
+    justify-content: center;
+    transform: translateY(50%);
+    font-size: 20px;
+  }
+
+  .icon_item{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+  }
+
+
+  .logo{
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    z-index: 1;
+  }
+
+  .right_side{
+    position: absolute;
+    display: flex;
+    top: 2%;
+    left: 90%;
+    z-index: 1;
+  }
+
+  .right_side div{
+    margin-right: 15px;
+    color: white;
+    font-size: 20px;
+   }
+
+@media (min-width: 280px) and (max-width: 1200px) {
+  body{
+    overflow: auto;
+  }
+  .logo{
+    position: absolute;
+    top: 0 !important;
+    left: 3%;
+    bottom: 0% !important;
+    z-index: 1;
+  }
+
+  .right_side{
+    position: absolute;
+    justify-content: right;
+    width: 100%;
+    color: white;
+    left: auto;
+    z-index: 1;
+  }
+
+  .card{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    top: 15% !important;
+    left: 0 !important;
+    color: white;
+    z-index: 1;
+  }
+
+  .footer__bottom_social{
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    top: 210%;
+    color: white;
+    left: auto;
+    z-index: 1;
+  }
+
+  .footer__bottom_text{
+    position: absolute;
+    top: 200%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    left: auto;
+    z-index: 1;
+  }
+
+  .card-footer{
+    padding: 0 !important;
+  }
+
+  .card-body p{
+    height: auto !important;
+    overflow: hidden !important;
+    flex-wrap: wrap !important;
+  }
+
+  .full_screen_item{
+    height: 75vh !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  body{
+    overflow: hidden !important;
+  }
+}
+
+
